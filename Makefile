@@ -3,10 +3,10 @@ CFLAGS = -Wall -g -O0
 
 all:
 	$(CC) $(CFLAGS) -o ch347eeprom ch347eeprom.c ch347funcs.c -lusb-1.0
-	$(CC) $(CFLAGS) -o mktestimg mktestimg.c
+	#$(CC) $(CFLAGS) -o mktestimg mktestimg.c
 
 clean:
-	rm -f ch347eeprom mktestimg
+	rm -f ch347eeprom #mktestimg
 
 test01: default
 	dd if=/dev/urandom of=tmp_random.bin bs=128 count=1
